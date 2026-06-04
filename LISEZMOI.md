@@ -1,7 +1,5 @@
 # 📚 maman-books — Guide d'installation
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-zoeillle-ffdd00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/zoeillle)
-
 > **Avertissement :** Ce projet est à but éducatif uniquement. Il s'agit d'une démonstration technique de développement de bots Telegram en Python. L'auteur décline toute responsabilité quant à l'usage que chacun en fait. Il appartient à chaque utilisateur de s'assurer que son utilisation est conforme aux lois en vigueur dans son pays ainsi qu'aux conditions d'utilisation des services tiers auxquels il se connecte.
 
 ---
@@ -123,15 +121,15 @@ ANNA_ARCHIVE_URL=https://example.com
 
 **Paramètres optionnels :**
 
-| Ligne | À quoi ça sert |
-|---|---|
-| `ALLOWED_FORMATS=epub,pdf,mobi,azw3` | Les formats que le bot peut t'envoyer (voir détail ci-dessous). |
-| `VIRUSTOTAL_API_KEY=` | Clé API [VirusTotal](https://www.virustotal.com) pour scanner les fichiers avant de les recevoir. Laisse vide pour désactiver. |
-| `SMTP_HOST=smtp.gmail.com` | Adresse du serveur mail (pour envoyer les livres par email ou vers un Kindle). |
-| `SMTP_PORT=587` | Port du serveur mail (laisse 587 par défaut). |
-| `SMTP_USER=` | Ton adresse email (ex : `toi@gmail.com`). |
-| `SMTP_PASSWORD=` | Mot de passe de ton email. Pour Gmail, utilise un **mot de passe d'application** (voir section Kindle ci-dessous). |
-| `SMTP_FROM=` | Adresse d'expéditeur. Laisse vide pour utiliser `SMTP_USER`. |
+| Ligne                                | À quoi ça sert                                                                                                                 |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `ALLOWED_FORMATS=epub,pdf,mobi,azw3` | Les formats que le bot peut t'envoyer (voir détail ci-dessous).                                                                |
+| `VIRUSTOTAL_API_KEY=`                | Clé API [VirusTotal](https://www.virustotal.com) pour scanner les fichiers avant de les recevoir. Laisse vide pour désactiver. |
+| `SMTP_HOST=smtp.gmail.com`           | Adresse du serveur mail (pour envoyer les livres par email ou vers un Kindle).                                                 |
+| `SMTP_PORT=587`                      | Port du serveur mail (laisse 587 par défaut).                                                                                  |
+| `SMTP_USER=`                         | Ton adresse email (ex : `toi@gmail.com`).                                                                                      |
+| `SMTP_PASSWORD=`                     | Mot de passe de ton email. Pour Gmail, utilise un **mot de passe d'application** (voir section Kindle ci-dessous).             |
+| `SMTP_FROM=`                         | Adresse d'expéditeur. Laisse vide pour utiliser `SMTP_USER`.                                                                   |
 
 **Quel format choisir ?**
 
@@ -142,6 +140,7 @@ Le bot peut te donner les livres dans différents formats :
 - **MOBI / AZW3** — formats Kindle, **nécessaires pour les vieux Kindle (avant 2022)**
 
 Options possibles :
+
 - `ALLOWED_FORMATS=epub,pdf,mobi,azw3` — le bot te **demande à chaque fois** quel format tu veux
 - `ALLOWED_FORMATS=epub` — tu reçois **toujours de l'EPUB**, sans question
 - `ALLOWED_FORMATS=epub,pdf` — choix entre EPUB et PDF uniquement
@@ -179,6 +178,7 @@ Le bot peut envoyer les livres directement par email ou sur ton Kindle, sans pas
 4. Google te donne un mot de passe à 16 lettres (ex : `abcd efgh ijkl mnop`) — **copie-le**
 
 Dans ton `.env`, remplis ces lignes :
+
 ```
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
@@ -186,6 +186,7 @@ SMTP_USER=toi@gmail.com
 SMTP_PASSWORD=abcdefghijklmnop
 SMTP_FROM=toi@gmail.com
 ```
+
 (le mot de passe sans espaces)
 
 ### Configurer Send to Kindle
